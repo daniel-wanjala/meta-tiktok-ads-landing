@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  devIndicators: {
-    buildActivity: 'none',
-  },
+  swcMinify: true,
+  poweredByHeader: false,
+  compress: true,
+  optimizeFonts: true,
 }
 
 module.exports = nextConfig
