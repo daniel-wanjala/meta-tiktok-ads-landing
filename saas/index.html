@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta & TikTok Ads Expert | Scale Your Kenya Business 10x</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --electric-blue: #0084ff;
+            --tiktok-pink: #ff0050;
+            --deep-purple: #1a0b2e;
+            --cyber-cyan: #00fff5;
+            --neon-orange: #ff6b35;
+            --dark: #0a0a0a;
+            --light: #f5f5f5;
+            --grey: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Sora', sans-serif;
+        }
+
+        /* Animated Grid Background */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, rgba(0, 132, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(255, 0, 80, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .section {
+            position: relative;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        /* Edit-layout removed: UI and styles were removed to simplify mobile UX */
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at top, var(--deep-purple), var(--dark));
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 132, 255, 0.15), transparent);
+            top: -400px;
+            left: -200px;
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 0, 80, 0.15), transparent);
+            bottom: -300px;
+            right: -150px;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 50px) scale(1.1); }
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 10px 24px;
+            background: rgba(0, 255, 245, 0.1);
+            border: 1px solid var(--cyber-cyan);
+            border-radius: 50px;
+            color: var(--cyber-cyan);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 245, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(0, 255, 245, 0.4); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink), var(--cyber-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            animation: slideUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Sora', sans-serif;
+        }
+
+        .stat-label {
+            color: var(--grey);
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            color: white;
+            box-shadow: 0 8px 30px rgba(0, 132, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 132, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(0, 132, 255, 0.1);
+            border: 1px solid var(--electric-blue);
+            border-radius: 50px;
+            color: var(--electric-blue);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, white, var(--cyber-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--grey);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .service-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 20px 60px rgba(0, 132, 255, 0.3);
+        }
+
+        .service-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .service-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .service-list li::before {
+            content: '→';
+            color: var(--cyber-cyan);
+            font-weight: 700;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 120px 20px;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: scale(1.05);
+            border-color: var(--electric-blue);
+        }
+
+        .result-number {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        .result-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .result-card p {
+            color: var(--grey);
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 120px 20px;
+        }
+
+        .process-timeline {
+            max-width: 900px;
+            margin: 60px auto 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 39px;
+            top: 80px;
+            width: 2px;
+            height: calc(100% + 0px);
+            background: linear-gradient(180deg, var(--electric-blue), transparent);
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+            font-family: 'Sora', sans-serif;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-top: 10px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Case Studies Section */
+        .case-studies {
+            padding: 120px 20px;
+            background: var(--deep-purple);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .case-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .case-image {
+            aspect-ratio: 16 / 9;
+            max-height: 250px;
+            min-height: 140px;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(48px, 10vw, 80px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .case-content {
+            padding: 35px;
+        }
+
+        .case-platform {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(0, 132, 255, 0.2);
+            border-radius: 20px;
+            color: var(--electric-blue);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .case-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .case-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cyber-cyan);
+            font-family: 'Sora', sans-serif;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--grey);
+            margin-top: 4px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 120px 20px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            background: rgba(0, 132, 255, 0.05);
+            border: 2px solid var(--electric-blue);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-plan {
+            font-size: 1.3rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .pricing-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        .pricing-period {
+            color: var(--grey);
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .pricing-features li {
+            padding: 14px 0;
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--cyber-cyan);
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 120px 20px;
+            background: var(--deep-purple);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 60px auto 0;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--electric-blue);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .faq-question h3 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--electric-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 30px 25px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0, 132, 255, 0.2), transparent);
+            top: 0;
+            left: 0;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, white, var(--cyber-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--grey);
+        }
+
+        /* Accessibility: reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Mobile / very small screen tweaks */
+        @media (max-width: 480px) {
+            .hero { padding: 40px 12px; min-height: auto; }
+            .hero::before { width: 300px; height: 300px; top: -150px; left: -100px; animation: none; }
+            .hero::after { width: 260px; height: 260px; bottom: -150px; right: -80px; animation: none; }
+            .hero-badge { padding: 8px 16px; font-size: 0.85rem; }
+            .service-card { padding: 20px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+            .case-image { max-height: 180px; font-size: clamp(36px, 10vw, 60px); }
+            .drag-handle { display: none; }
+            .edit-toggle { bottom: calc(12px + env(safe-area-inset-bottom)); right: 12px; padding: 12px 18px; }
+            .cta, .services, .pricing, .results, .case-studies, .faq { padding: 60px 12px; }
+            .timeline-number { width: 64px; height: 64px; font-size: 1.6rem; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-grid,
+            .case-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-item::before {
+                left: 39px;
+                top: 100px;
+            }
+
+            .hero-stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    
+    <!-- Edit layout feature removed for mobile / touch compatibility -->
+
+    <section class="section hero" data-section="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Kenya's Top-Rated Ads Specialist</div>
+            <h1>Scale Your Business 10x with Meta & TikTok Ads</h1>
+            <p>Data-driven advertising campaigns that turn clicks into customers. Specialized in Kenyan market dynamics, local consumer behavior, and ROI optimization.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500%</div>
+                    <div class="stat-label">Average ROAS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">KSh 20M+</div>
+                    <div class="stat-label">Ad Spend Managed</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">🎯 Get Free Audit</a>
+                <a href="#case-studies" class="btn btn-secondary">View Results</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services" data-section="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">WHAT I DO</div>
+                <h2>Paid Ads Services</h2>
+                <p>Complete advertising solutions for businesses ready to scale</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Meta Ads (Facebook & Instagram)</h3>
+                    <p>Targeted campaigns that reach your ideal customers on the world's largest social platforms.</p>
+                    <ul class="service-list">
+                        <li>Campaign strategy & setup</li>
+                        <li>Audience research & targeting</li>
+                        <li>Creative ad design & copywriting</li>
+                        <li>A/B testing & optimization</li>
+                        <li>Pixel setup & conversion tracking</li>
+                        <li>Monthly performance reports</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎵</div>
+                    <h3>TikTok Ads</h3>
+                    <p>Viral-ready campaigns that capture attention and drive massive engagement from Kenya's fastest-growing platform.</p>
+                    <ul class="service-list">
+                        <li>TikTok Ads Manager setup</li>
+                        <li>Video ad creation & editing</li>
+                        <li>Hashtag & trend optimization</li>
+                        <li>Spark Ads strategy</li>
+                        <li>Gen Z & millennial targeting</li>
+                        <li>Performance analytics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Retargeting Campaigns</h3>
+                    <p>Convert warm traffic into paying customers with smart retargeting across Meta and TikTok.</p>
+                    <ul class="service-list">
+                        <li>Custom audience creation</li>
+                        <li>Cart abandonment recovery</li>
+                        <li>Cross-platform retargeting</li>
+                        <li>Dynamic product ads</li>
+                        <li>Email list retargeting</li>
+                        <li>Conversion optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Clear, actionable insights that show exactly where your money is going and what's working.</p>
+                    <ul class="service-list">
+                        <li>Real-time campaign dashboards</li>
+                        <li>ROI & ROAS tracking</li>
+                        <li>Competitor analysis</li>
+                        <li>Custom KPI reports</li>
+                        <li>Weekly performance updates</li>
+                        <li>Strategic recommendations</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Creative Design</h3>
+                    <p>Scroll-stopping ad creatives designed specifically for Kenyan audiences and mobile viewing.</p>
+                    <ul class="service-list">
+                        <li>Static & video ads</li>
+                        <li>Carousel & collection ads</li>
+                        <li>Stories & Reels format</li>
+                        <li>Branded templates</li>
+                        <li>UGC-style content</li>
+                        <li>Fast turnaround times</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Strategy Consulting</h3>
+                    <p>Expert guidance on marketing strategy, budget allocation, and scaling your ad spend profitably.</p>
+                    <ul class="service-list">
+                        <li>Marketing audit & strategy</li>
+                        <li>Budget recommendations</li>
+                        <li>Funnel optimization</li>
+                        <li>Platform selection advice</li>
+                        <li>Scaling roadmap</li>
+                        <li>Team training (if needed)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section results" data-section="results">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">PROVEN RESULTS</div>
+                <h2>Real Numbers, Real Growth</h2>
+                <p>The metrics that matter for your bottom line</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">8x</div>
+                    <h3>Return on Ad Spend</h3>
+                    <p>Average ROAS across all campaigns - for every KSh 1 spent, clients earn KSh 8 back</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">65%</div>
+                    <h3>Lower Cost Per Click</h3>
+                    <p>Compared to industry average through laser-targeted audience research</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">3.2%</div>
+                    <h3>Average CTR</h3>
+                    <p>2x higher than Kenya industry benchmark through compelling ad creative</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">90 Days</div>
+                    <h3>To Profitability</h3>
+                    <p>Most clients see positive ROI within 3 months of campaign launch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section process" data-section="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">HOW IT WORKS</div>
+                <h2>My Proven 5-Step Process</h2>
+                <p>From strategy to scaling - here's exactly how we'll grow your business</p>
+            </div>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Discovery & Audit</h3>
+                        <p>Free comprehensive audit of your current marketing, competitors, and opportunities. We identify what's working, what's not, and where the biggest wins are hiding.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Strategy Development</h3>
+                        <p>Custom advertising strategy tailored to your business goals, target audience, and budget. Complete with platform recommendations and projected ROI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Campaign Launch</h3>
+                        <p>Ads Manager setup, pixel installation, audience building, creative production, and campaign launch. Everything configured for maximum performance from day one.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Optimization & Testing</h3>
+                        <p>Continuous A/B testing, bid optimization, audience refinement, and creative iteration. Daily monitoring and weekly adjustments to improve performance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Scale & Dominate</h3>
+                        <p>Once we've found winning formulas, we scale budget intelligently to maximize profits while maintaining ROI. Expand to new audiences and platforms strategically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section case-studies" data-section="case-studies" id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">SUCCESS STORIES</div>
+                <h2>Recent Campaign Results</h2>
+                <p>Real businesses, real results from Kenya</p>
+            </div>
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-image">🛍️</div>
+                    <div class="case-content">
+                        <span class="case-platform">META ADS</span>
+                        <h3>Fashion E-commerce</h3>
+                        <p>Scaled a Nairobi-based fashion store from KSh 200K to KSh 2.5M monthly revenue in 4 months using Facebook & Instagram ads.</p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">950%</div>
+                                <div class="metric-label">ROAS</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">KSh 89</div>
+                                <div class="metric-label">CPA</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">12,400</div>
+                                <div class="metric-label">Orders</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">🎓</div>
+                    <div class="case-content">
+                        <span class="case-platform">TIKTOK ADS</span>
+                        <h3>Online Course Platform</h3>
+                        <p>Generated 3,800+ course enrollments for a skills training platform targeting Kenyan youth through TikTok viral campaigns.</p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">620%</div>
+                                <div class="metric-label">ROAS</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">KSh 450</div>
+                                <div class="metric-label">Cost per Lead</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">3,800+</div>
+                                <div class="metric-label">Enrollments</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">🍕</div>
+                    <div class="case-content">
+                        <span class="case-platform">META + TIKTOK</span>
+                        <h3>Restaurant Chain</h3>
+                        <p>Drove 15,000+ in-store visits and delivery orders for a Mombasa restaurant using geo-targeted ads across Meta and TikTok.</p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">780%</div>
+                                <div class="metric-label">ROAS</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">KSh 62</div>
+                                <div class="metric-label">Cost per Visit</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">15K+</div>
+                                <div class="metric-label">Store Visits</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pricing" data-section="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">INVESTMENT</div>
+                <h2>Transparent Pricing</h2>
+                <p>Choose the package that fits your growth stage</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-plan">Starter</h3>
+                    <div class="pricing-amount">KSh 35K</div>
+                    <p class="pricing-period">per month</p>
+                    <ul class="pricing-features">
+                        <li>1 platform (Meta OR TikTok)</li>
+                        <li>Up to KSh 100K ad spend</li>
+                        <li>2 campaigns</li>
+                        <li>Basic audience targeting</li>
+                        <li>4 ad creatives/month</li>
+                        <li>Weekly performance reports</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="pricing-plan">Professional</h3>
+                    <div class="pricing-amount">KSh 75K</div>
+                    <p class="pricing-period">per month</p>
+                    <ul class="pricing-features">
+                        <li>Meta + TikTok Ads</li>
+                        <li>Up to KSh 300K ad spend</li>
+                        <li>Unlimited campaigns</li>
+                        <li>Advanced audience research</li>
+                        <li>12 ad creatives/month</li>
+                        <li>Daily optimization</li>
+                        <li>Retargeting campaigns</li>
+                        <li>Weekly strategy calls</li>
+                        <li>Priority WhatsApp support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Most Popular</a>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-plan">Enterprise</h3>
+                    <div class="pricing-amount">KSh 150K+</div>
+                    <p class="pricing-period">per month</p>
+                    <ul class="pricing-features">
+                        <li>Full-service ad management</li>
+                        <li>Unlimited ad spend</li>
+                        <li>Multi-platform campaigns</li>
+                        <li>Dedicated account manager</li>
+                        <li>Unlimited creatives</li>
+                        <li>Advanced analytics dashboard</li>
+                        <li>Competitor monitoring</li>
+                        <li>Conversion rate optimization</li>
+                        <li>24/7 priority support</li>
+                        <li>Quarterly strategy reviews</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq" data-section="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">FAQ</div>
+                <h2>Common Questions</h2>
+                <p>Everything you need to know about working together</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How much should I budget for ad spend?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            For most Kenyan businesses, I recommend starting with KSh 50K-100K monthly ad spend minimum. This allows enough data to test and optimize. Once profitable, we scale up. The management fee is separate from ad spend.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How long before I see results?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You'll see traffic and engagement immediately. For e-commerce, first sales typically happen within 1-2 weeks. Full campaign optimization takes 30-60 days. Most clients achieve profitable ROAS within 90 days.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you work with businesses outside Nairobi?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! I work with clients across Kenya - Nairobi, Mombasa, Kisumu, Nakuru, and everywhere in between. Everything is done remotely via WhatsApp, Zoom, and email.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What industries do you specialize in?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            I've successfully run campaigns for e-commerce, restaurants, real estate, education, beauty/cosmetics, fashion, fitness, and professional services. If you sell to consumers in Kenya, I can help you scale.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you create the ad content too?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! All packages include ad creative design and copywriting. I create static images, video ads, carousel ads, and write all ad copy. You just provide product photos/info and brand guidelines.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What's your minimum commitment?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            I recommend a minimum 3-month commitment to allow proper testing and optimization. However, contracts are month-to-month - you can pause or cancel anytime with 30 days notice if you're not seeing results.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta" data-section="cta" id="contact">
+        <div class="cta-content">
+            <h2>Ready to 10x Your Business?</h2>
+            <p>Get a free ads audit and custom strategy session. Let's discuss how Meta & TikTok ads can transform your revenue.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/254746748557?text=Hi!%20I%20want%20a%20free%20ads%20audit%20for%20my%20business" class="btn btn-primary">
+                    💬 WhatsApp Me Now
+                </a>
+                <a href="mailto:wanjalad003@gmail.com" class="btn btn-secondary">
+                    ✉️ Email Me
+                </a>
+                <a href="tel:+254746748557" class="btn btn-secondary">
+                    📞 Call Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Meta & TikTok Ads Specialist Kenya. Turning ad spend into profit.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Edit-layout feature removed. Drag-and-drop handlers and toggle removed for simpler mobile UX.
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
