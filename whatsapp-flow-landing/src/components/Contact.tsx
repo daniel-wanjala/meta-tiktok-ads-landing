@@ -19,19 +19,19 @@ export default function Contact() {
 
         <div className="flex flex-col sm:flex-row gap-5 justify-center flex-wrap">
           <a
-            href="https://wa.me/254700000000?text=Hi,%20I'm%20interested%20in%20your%20WhatsApp%20Flow%20services"
+            href="https://wa.me/254746748557?text=Hi,%20I'm%20interested%20in%20your%20WhatsApp%20Flow%20services"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-lime text-charcoal font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
           >
             💬 WhatsApp Me
           </a>
           <a
-            href="mailto:your@email.com"
+            href="mailto:wanjalad003@gmail.com"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-lime text-charcoal font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
           >
             ✉️ Email Me
           </a>
           <a
-            href="tel:+254700000000"
+            href="tel:+254746748557"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-lime text-charcoal font-bold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
           >
             📞 Call Me
