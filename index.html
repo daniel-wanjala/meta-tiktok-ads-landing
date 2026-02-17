@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meta & TikTok Ads Expert | Scale Your Kenya Business 10x</title>
+  <title>Meta & TikTok Ads Expert Kenya | Scale Your Business 10x with Chat-to-WhatsApp Ads</title>
+  <meta name="description" content="Kenya's #1 Meta & TikTok Ads specialist. Drive qualified leads directly to WhatsApp. 5.4x average ROAS. No fluff, just results.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,6 +16,7 @@
       --deep-purple: #1a0b2e;
       --cyber-cyan: #00fff5;
       --neon-orange: #ff6b35;
+      --whatsapp-green: #25D366;
       --dark: #0a0a0a;
       --light: #f5f5f5;
       --grey: #888888;
@@ -93,6 +95,8 @@
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0, 132, 255, 0.6); }
     .btn-secondary { background: transparent; color: white; border: 2px solid rgba(255, 255, 255, 0.3); }
     .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: white; }
+    .btn-whatsapp { background: var(--whatsapp-green); color: white; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+    .btn-whatsapp:hover { background: #1da851; transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6); }
 
     /* Services Section */
     .services { padding: 120px 20px; position: relative; }
@@ -111,7 +115,7 @@
     .section-header p { font-size: 1.2rem; color: var(--grey); max-width: 700px; margin: 0 auto; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
     .service-card {
-      background: rgba(255, 255, 255, 0.03); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px;
       transition: all 0.3s ease; position: relative; overflow: hidden;
     }
@@ -134,8 +138,26 @@
     .service-list li { padding: 8px 0; color: rgba(255, 255, 255, 0.6); display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
     .service-list li::before { content: '→'; color: var(--cyber-cyan); font-weight: 700; }
 
+    /* Problem-Solution */
+    .problem-solution { padding: 120px 20px; background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
+    .problem-card, .solution-card {
+      padding: 40px; border-radius: 20px; transition: all 0.3s ease;
+    }
+    .problem-card {
+      background: rgba(255, 0, 80, 0.05); border: 1px solid rgba(255, 0, 80, 0.2);
+    }
+    .solution-card {
+      background: rgba(0, 255, 245, 0.05); border: 1px solid rgba(0, 255, 245, 0.2);
+    }
+    .problem-card:hover { transform: translateY(-5px); border-color: var(--tiktok-pink); }
+    .solution-card:hover { transform: translateY(-5px); border-color: var(--cyber-cyan); }
+    .card-icon { font-size: 3rem; margin-bottom: 20px; }
+    .card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white; }
+    .card-text { color: rgba(255, 255, 255, 0.7); line-height: 1.7; }
+
     /* Results */
-    .results { padding: 120px 20px; background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
+    .results { padding: 120px 20px; }
     .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 60px; }
     .result-card {
       text-align: center; padding: 40px 30px; background: rgba(255, 255, 255, 0.03);
@@ -151,7 +173,7 @@
     .result-card p { color: var(--grey); line-height: 1.6; }
 
     /* Process */
-    .process { padding: 120px 20px; }
+    .process { padding: 120px 20px; background: var(--deep-purple); }
     .process-timeline { max-width: 900px; margin: 60px auto 0; }
     .timeline-item { display: flex; gap: 30px; margin-bottom: 60px; position: relative; }
     .timeline-item::before {
@@ -169,7 +191,7 @@
     .timeline-content p { color: rgba(255, 255, 255, 0.7); line-height: 1.7; font-size: 1.1rem; }
 
     /* Case Studies */
-    .case-studies { padding: 120px 20px; background: var(--deep-purple); }
+    .case-studies { padding: 120px 20px; }
     .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 60px; }
     .case-card {
       background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
@@ -195,7 +217,7 @@
     .metric-label { font-size: 0.8rem; color: var(--grey); margin-top: 4px; }
 
     /* Pricing */
-    .pricing { padding: 120px 20px; }
+    .pricing { padding: 120px 20px; background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 60px; }
     .pricing-card {
       background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
@@ -229,7 +251,7 @@
     .pricing-features li::before { content: '✓'; color: var(--cyber-cyan); font-weight: 700; font-size: 1.3rem; flex-shrink: 0; }
 
     /* FAQ */
-    .faq { padding: 120px 20px; background: var(--deep-purple); }
+    .faq { padding: 120px 20px; }
     .faq-container { max-width: 900px; margin: 60px auto 0; }
     .faq-item {
       background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
@@ -246,7 +268,7 @@
     .faq-answer-content { padding: 0 30px 25px; color: rgba(255, 255, 255, 0.7); line-height: 1.7; }
 
     /* CTA */
-    .cta { padding: 120px 20px; text-align: center; position: relative; overflow: hidden; }
+    .cta { padding: 120px 20px; text-align: center; position: relative; overflow: hidden; background: var(--deep-purple); }
     .cta::before {
       content: ''; position: absolute; width: 100%; height: 100%;
       background: radial-gradient(ellipse at center, rgba(0, 132, 255, 0.2), transparent);
@@ -260,7 +282,7 @@
     }
     .cta p { font-size: 1.3rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 50px; }
 
-    /* Footer & Modals */
+    /* Footer */
     .footer { padding: 60px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
     .footer p { color: var(--grey); }
 
@@ -322,7 +344,7 @@
 
     /* Media Queries */
     @media (max-width: 768px) {
-      .services-grid, .case-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .services-grid, .case-grid, .pricing-grid, .problem-grid { grid-template-columns: 1fr; }
       .timeline-item { flex-direction: column; }
       .timeline-item::before { left: 39px; top: 100px; }
       .hero-stats { gap: 30px; }
@@ -337,15 +359,20 @@
   <div class="grid-bg"></div>
 
   <div class="sticky-header" id="stickyHeader">
-    <div class="sticky-header-text show">🚀 Scale Your Ads Today</div>
-    <a href="#" class="sticky-btn trigger-modal">Book A Call</a>
+    <div class="sticky-header-text show">🚀 Limited Slots - Book Your Free Strategy Call</div>
+    <a href="https://wa.me/254736127284?text=Hi!%20I%20want%20to%20scale%20with%20Meta%20and%20TikTok%20ads" class="sticky-btn">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      Chat on WhatsApp
+    </a>
   </div>
 
   <section class="hero">
     <div class="hero-content">
-      <span class="hero-badge">🏆 #1 Performance Marketer in Kenya</span>
+      <span class="hero-badge">🏆 #1 Chat-to-WhatsApp Ads Specialist in Kenya</span>
       <h1>Stop Burning Money.<br>Start Scaling Revenue.</h1>
-      <p>We build high-converting Meta & TikTok ad funnels for Kenyan e-commerce brands and service businesses. No fluff. Just ROI.</p>
+      <p>We build high-converting Meta & TikTok ad campaigns that send qualified leads directly to your WhatsApp. No fluff. Just ROI.</p>
       
       <div class="hero-stats">
         <div class="stat-item">
@@ -363,8 +390,13 @@
       </div>
 
       <div class="cta-buttons">
-        <a href="#pricing" class="btn btn-primary">See Pricing</a>
-        <button class="btn btn-secondary trigger-modal">Book Strategy Call</button>
+        <a href="https://wa.me/254736127284?text=Hi!%20I%20want%20to%20scale%20with%20Meta%20and%20TikTok%20ads" class="btn btn-whatsapp">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Chat on WhatsApp Now
+        </a>
+        <a href="#pricing" class="btn btn-secondary">See Pricing →</a>
       </div>
     </div>
   </section>
@@ -382,9 +414,62 @@
         <div class="badge-subtext">Creative Strategy</div>
       </div>
       <div class="badge-item">
+        <div class="badge-icon">💬</div>
+        <div class="badge-text">WhatsApp Ads Expert</div>
+        <div class="badge-subtext">Chat-to-Convert Funnels</div>
+      </div>
+      <div class="badge-item">
         <div class="badge-icon">🇰🇪</div>
         <div class="badge-text">Kenya Expert</div>
         <div class="badge-subtext">Local Market Context</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem-solution">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">THE PROBLEM</span>
+        <h2>Your Ads Are Failing. Here's Why.</h2>
+        <p>Most Kenyan businesses waste money on ads because they don't understand the full funnel</p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="card-icon">❌</div>
+          <h3 class="card-title">Generic Ad Creatives</h3>
+          <p class="card-text">Stock photos and boring text won't cut it. Kenyans scroll past ads that don't grab attention in 0.5 seconds.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="card-icon">❌</div>
+          <h3 class="card-title">Wrong Targeting</h3>
+          <p class="card-text">Blasting ads to "everyone in Kenya" burns your budget. You need precise audience segmentation based on behavior data.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="card-icon">❌</div>
+          <h3 class="card-title">No WhatsApp Integration</h3>
+          <p class="card-text">Sending people to websites with forms kills conversions. Kenyans prefer chatting on WhatsApp to close deals.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="card-icon">✅</div>
+          <h3 class="card-title">Viral-Style Creatives</h3>
+          <p class="card-text">We create UGC-style ads that look native to the feed. Hooks designed for Kenyan culture and buying psychology.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="card-icon">✅</div>
+          <h3 class="card-title">AI-Powered Targeting</h3>
+          <p class="card-text">We use Meta's Advantage+ and TikTok's algorithm to find your ideal customers automatically. Precise, scalable, profitable.</p>
+        </div>
+
+        <div class="solution-card">
+          <div class="card-icon">✅</div>
+          <h3 class="card-title">Direct WhatsApp Funnel</h3>
+          <p class="card-text">Clicks go straight to WhatsApp chat. Instant conversations = higher trust = more sales. Perfect for the Kenyan market.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -403,9 +488,10 @@
           <h3>Meta Ads (FB/IG)</h3>
           <p>Advanced audience segmentation, CAPI setup, and retargeting structures that recover lost sales.</p>
           <ul class="service-list">
-            <li>Algorithm-friendly Creative</li>
+            <li>Chat-to-WhatsApp campaigns</li>
             <li>Conversion API Setup</li>
             <li>Scale-proof Campaign Structure</li>
+            <li>Dynamic product catalogs</li>
           </ul>
         </div>
 
@@ -417,6 +503,19 @@
             <li>UGC Creator Network</li>
             <li>Spark Ads Strategy</li>
             <li>Trend Jacking</li>
+            <li>Shopping Ads Integration</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💬</div>
+          <h3>WhatsApp Ad Funnels</h3>
+          <p>Send leads directly to WhatsApp with pre-filled messages. Close sales in chat, not through complicated forms.</p>
+          <ul class="service-list">
+            <li>Click-to-WhatsApp Ads</li>
+            <li>Automated Chat Sequences</li>
+            <li>Lead Qualification Systems</li>
+            <li>WhatsApp Business API Setup</li>
           </ul>
         </div>
 
@@ -425,9 +524,34 @@
           <h3>Creative Strategy</h3>
           <p>The ad image/video is 80% of the success. We script, edit, and iterate on high-performing visuals.</p>
           <ul class="service-list">
-            <li>Video Editing</li>
-            <li>Copywriting</li>
+            <li>Video Editing (Reels/TikTok style)</li>
+            <li>Kenyan-focused Copywriting</li>
             <li>Angle Testing</li>
+            <li>Mobile-first Design</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Analytics & Tracking</h3>
+          <p>If you can't measure it, you can't improve it. We set up bulletproof tracking for every shilling spent.</p>
+          <ul class="service-list">
+            <li>Meta Pixel + CAPI Setup</li>
+            <li>TikTok Pixel Configuration</li>
+            <li>Google Analytics 4</li>
+            <li>Custom Dashboards</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚀</div>
+          <h3>Campaign Optimization</h3>
+          <p>We monitor campaigns 24/7 and make data-driven adjustments to maximize your ROAS every single day.</p>
+          <ul class="service-list">
+            <li>A/B Testing</li>
+            <li>Budget Scaling Strategies</li>
+            <li>Creative Refresh Cycles</li>
+            <li>Performance Reporting</li>
           </ul>
         </div>
       </div>
@@ -439,6 +563,7 @@
       <div class="section-header">
         <span class="section-tag">THE BLUEPRINT</span>
         <h2>How We Scale You</h2>
+        <p>Our proven 4-step system to turn your ad spend into profit</p>
       </div>
       
       <div class="process-timeline">
@@ -453,21 +578,21 @@
           <div class="timeline-number">2</div>
           <div class="timeline-content">
             <h3>Creative Sprint</h3>
-            <p>We analyze your competitors and produce 3-5 initial ad angles designed to hook Kenyan buyers immediately.</p>
+            <p>We analyze your competitors and produce 3-5 initial ad angles designed to hook Kenyan buyers immediately. Focus on WhatsApp-first messaging.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-number">3</div>
           <div class="timeline-content">
             <h3>Launch & Testing</h3>
-            <p>We go live with "Rapid Fire Testing" to identify winning audiences and creatives within 48 hours.</p>
+            <p>We go live with "Rapid Fire Testing" to identify winning audiences and creatives within 48 hours. All traffic goes to WhatsApp for maximum conversions.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-number">4</div>
           <div class="timeline-content">
             <h3>Scale & Optimize</h3>
-            <p>Once we hit your target ROAS, we increase budget vertically and horizontally to maximize profit.</p>
+            <p>Once we hit your target ROAS, we increase budget vertically and horizontally to maximize profit. Continuous creative refresh keeps ads performing.</p>
           </div>
         </div>
       </div>
@@ -479,15 +604,16 @@
       <div class="section-header">
         <span class="section-tag">REAL DATA</span>
         <h2>Case Studies</h2>
+        <p>Real campaigns. Real results. Real businesses in Kenya.</p>
       </div>
 
       <div class="case-grid">
         <div class="case-card">
           <div class="case-image">Fashion</div>
           <div class="case-content">
-            <span class="case-platform">META ADS</span>
+            <span class="case-platform">META + WHATSAPP</span>
             <h3>Nairobi Fashion Brand</h3>
-            <p>Scaled a local streetwear brand from KES 200k to KES 1.2M monthly revenue in 90 days.</p>
+            <p>Scaled a local streetwear brand from KES 200k to KES 1.2M monthly revenue in 90 days using WhatsApp ad funnels.</p>
             <div class="case-metrics">
               <div class="metric">
                 <div class="metric-value">6.2x</div>
@@ -499,7 +625,7 @@
               </div>
               <div class="metric">
                 <div class="metric-value">1.2M</div>
-                <div class="metric-label">Rev</div>
+                <div class="metric-label">Revenue</div>
               </div>
             </div>
           </div>
@@ -509,8 +635,8 @@
           <div class="case-image">Real Estate</div>
           <div class="case-content">
             <span class="case-platform">LEAD GEN</span>
-            <h3>Off-Plan Housing</h3>
-            <p>Generated qualified leads for properties in Kilimani. High intent leads booked for site visits.</p>
+            <h3>Off-Plan Housing Kilimani</h3>
+            <p>Generated qualified leads for properties in Kilimani. High intent leads booked for site visits via WhatsApp automation.</p>
             <div class="case-metrics">
               <div class="metric">
                 <div class="metric-value">450</div>
@@ -527,6 +653,29 @@
             </div>
           </div>
         </div>
+
+        <div class="case-card">
+          <div class="case-image">Fitness</div>
+          <div class="case-content">
+            <span class="case-platform">TIKTOK + WHATSAPP</span>
+            <h3>Gym Membership Campaign</h3>
+            <p>Used TikTok's younger demographic to drive gym sign-ups. WhatsApp chat automation closed deals instantly.</p>
+            <div class="case-metrics">
+              <div class="metric">
+                <div class="metric-value">280</div>
+                <div class="metric-label">Sign-ups</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">KES 800</div>
+                <div class="metric-label">CPA</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">4.8x</div>
+                <div class="metric-label">ROAS</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -536,7 +685,7 @@
       <div class="section-header">
         <span class="section-tag">INVESTMENT</span>
         <h2>Transparent Pricing</h2>
-        <p>No hidden fees. Just a flat retainer plus a performance incentive.</p>
+        <p>No hidden fees. Just a flat retainer that includes everything you need to scale.</p>
       </div>
 
       <div class="pricing-grid">
@@ -547,10 +696,12 @@
           <ul class="pricing-features">
             <li>Ad Spend up to KES 150k</li>
             <li>Meta Ads Only</li>
+            <li>WhatsApp Funnel Setup</li>
             <li>2 Creative Variations/mo</li>
             <li>Bi-Weekly Reporting</li>
+            <li>Email Support</li>
           </ul>
-          <a href="#" class="btn btn-secondary trigger-modal">Get Started</a>
+          <a href="https://wa.me/254736127284?text=Hi!%20I'm%20interested%20in%20the%20Startup%20package" class="btn btn-secondary">Get Started</a>
         </div>
 
         <div class="pricing-card featured">
@@ -560,11 +711,13 @@
           <ul class="pricing-features">
             <li>Ad Spend up to KES 500k</li>
             <li>Meta & TikTok Ads</li>
+            <li>Advanced WhatsApp Automation</li>
             <li>5 Creative Variations/mo</li>
             <li>Weekly Strategy Calls</li>
             <li>Conversion API Setup</li>
+            <li>Priority WhatsApp Support</li>
           </ul>
-          <a href="#" class="btn btn-primary trigger-modal">Get Started</a>
+          <a href="https://wa.me/254736127284?text=Hi!%20I'm%20interested%20in%20the%20Growth%20package" class="btn btn-primary">Get Started</a>
         </div>
 
         <div class="pricing-card">
@@ -574,12 +727,18 @@
           <ul class="pricing-features">
             <li>Uncapped Ad Spend</li>
             <li>Full-Funnel Strategy</li>
+            <li>WhatsApp Business API</li>
             <li>Unlimited Creatives</li>
-            <li>Slack Support Channel</li>
+            <li>Dedicated Account Manager</li>
             <li>Landing Page Optimization</li>
+            <li>24/7 Slack Support</li>
           </ul>
-          <a href="#" class="btn btn-secondary trigger-modal">Contact Us</a>
+          <a href="https://wa.me/254736127284?text=Hi!%20I'm%20interested%20in%20the%20Enterprise%20package" class="btn btn-secondary">Contact Us</a>
         </div>
+      </div>
+
+      <div class="section-header" style="margin-top: 60px;">
+        <p style="color: rgba(255,255,255,0.6); font-size: 1rem;">All packages include strategy consultation, campaign setup, and performance optimization</p>
       </div>
     </div>
   </section>
@@ -587,6 +746,7 @@
   <section class="faq">
     <div class="container">
       <div class="section-header">
+        <span class="section-tag">FAQ</span>
         <h2>Frequently Asked Questions</h2>
       </div>
       <div class="faq-container">
@@ -597,7 +757,7 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              We recommend a minimum ad spend of KES 30,000 per month (excluding our service fee) to gather enough data for the algorithms to work effectively.
+              We recommend a minimum ad spend of KES 30,000 per month (excluding our service fee) to gather enough data for the algorithms to work effectively. Chat-to-WhatsApp campaigns can start smaller as they convert faster.
             </div>
           </div>
         </div>
@@ -608,7 +768,18 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Yes! We provide creative direction and can edit existing assets. For the "Growth" plan, we actively help produce high-converting UGC style creatives.
+              Yes! We provide creative direction and can edit existing assets. For the "Growth" and "Enterprise" plans, we actively help produce high-converting UGC style creatives optimized for the Kenyan market.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How does the WhatsApp funnel work?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We use Meta and TikTok's Click-to-WhatsApp ad formats. When someone clicks your ad, they're taken directly to a WhatsApp chat with your business (with a pre-filled message). This eliminates friction and increases conversions by 2-3x compared to traditional landing pages.
             </div>
           </div>
         </div>
@@ -619,7 +790,29 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              We operate on a month-to-month basis. We believe our results should keep you staying, not a piece of paper.
+              We operate on a month-to-month basis. We believe our results should keep you staying, not a piece of paper. You can cancel anytime with 30 days notice.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What industries do you work with?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We specialize in e-commerce, real estate, fitness/wellness, education, professional services, and local businesses. If you sell to Kenyan consumers and want to use WhatsApp as your primary sales channel, we can help.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How quickly will I see results?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Most clients see qualified leads within 48 hours of launch. Profitable ROAS typically happens within 2-4 weeks as we optimize creatives and audiences. WhatsApp campaigns convert faster than traditional funnels.
             </div>
           </div>
         </div>
@@ -632,13 +825,48 @@
       <h2>Ready to 10x Your Sales?</h2>
       <p>Spots are limited. We only take on 3 new clients per month to ensure quality.</p>
       <div class="cta-buttons">
-        <button class="btn btn-primary trigger-modal">Book Your Free Audit</button>
+        <a href="https://wa.me/254736127284?text=Hi!%20I%20want%20a%20free%20ad%20audit%20and%20strategy%20call" class="btn btn-whatsapp">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Book Your Free Audit
+        </a>
+        <a href="mailto:wanjalad003@gmail.com" class="btn btn-secondary">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Email Us
+        </a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2024 Kenya Ads Expert. All Rights Reserved.</p>
+    <div class="container" style="max-width: 1200px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; margin-bottom: 40px;">
+        <div>
+          <h3 style="color: white; font-size: 1.3rem; margin-bottom: 16px;">Meta & TikTok Ads Kenya</h3>
+          <p style="color: var(--grey); line-height: 1.6;">Professional performance marketing for Kenyan businesses. Drive sales through WhatsApp with proven ad strategies.</p>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 1rem; margin-bottom: 16px;">Quick Links</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#pricing" style="color: var(--grey); text-decoration: none; transition: color 0.3s;">Pricing</a>
+            <a href="#" class="trigger-modal" style="color: var(--grey); text-decoration: none; transition: color 0.3s;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: white; font-size: 1rem; margin-bottom: 16px;">Contact</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="https://wa.me/254736127284" style="color: var(--grey); text-decoration: none; transition: color 0.3s;">WhatsApp: +254 736 127 284</a>
+            <a href="mailto:wanjalad003@gmail.com" style="color: var(--grey); text-decoration: none; transition: color 0.3s;">wanjalad003@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p>&copy; 2026 Kenya Ads Expert. All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <div class="contact-modal" id="contactModal">
@@ -649,12 +877,12 @@
       
       <div class="contact-info-item">
         <div class="contact-label">WhatsApp / Call</div>
-        <div class="contact-value"><a href="https://wa.link/y7s6hm">+254 746 748 557</a></div>
+        <div class="contact-value"><a href="https://wa.me/254736127284">+254 736 127 284</a></div>
       </div>
       
       <div class="contact-info-item">
         <div class="contact-label">Email</div>
-        <div class="contact-value"><a href="mailto:wanjalad003@gmail.com">hello@growth.ke</a></div>
+        <div class="contact-value"><a href="mailto:wanjalad003@gmail.com">wanjalad003@gmail.com</a></div>
       </div>
     </div>
   </div>
@@ -668,13 +896,11 @@
       question.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         
-        // Close all other items
         faqItems.forEach(otherItem => {
           otherItem.classList.remove('active');
           otherItem.querySelector('.faq-answer').style.maxHeight = null;
         });
 
-        // Toggle current item
         if (!isActive) {
           item.classList.add('active');
           const answer = item.querySelector('.faq-answer');
@@ -699,7 +925,6 @@
       modal.classList.remove('active');
     });
 
-    // Close modal when clicking outside content
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.classList.remove('active');
