@@ -156,6 +156,39 @@
     .card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; color: white; }
     .card-text { color: rgba(255, 255, 255, 0.7); line-height: 1.7; }
 
+    /* WhatsApp Visual Mockup */
+    .whatsapp-visual { padding: 80px 20px; background: var(--deep-purple); text-align: center; }
+    .whatsapp-mockup {
+      max-width: 300px; margin: 40px auto 0; background: #e5ddd5; border-radius: 30px;
+      padding: 20px 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); position: relative;
+    }
+    .whatsapp-mockup::before {
+      content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      width: 120px; height: 25px; background: #333; border-radius: 20px;
+    }
+    .mockup-header {
+      background: #075e54; color: white; padding: 10px; border-radius: 20px 20px 0 0;
+      font-weight: 600; display: flex; align-items: center; gap: 10px; margin-bottom: 15px;
+    }
+    .mockup-header span { background: #128c7e; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    .mockup-chat { display: flex; flex-direction: column; gap: 10px; }
+    .message {
+      max-width: 80%; padding: 8px 12px; border-radius: 10px; font-size: 0.9rem;
+      position: relative; animation: fadeIn 0.5s;
+    }
+    .message.in { background: white; align-self: flex-start; }
+    .message.out { background: #dcf8c6; align-self: flex-end; }
+    .message::after {
+      content: ''; position: absolute; width: 0; height: 0; border-style: solid;
+    }
+    .message.in::after {
+      left: -8px; bottom: 0; border-width: 8px 8px 0 0; border-color: white transparent transparent transparent;
+    }
+    .message.out::after {
+      right: -8px; bottom: 0; border-width: 8px 0 0 8px; border-color: #dcf8c6 transparent transparent transparent;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     /* Results */
     .results { padding: 120px 20px; }
     .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 60px; }
@@ -215,6 +248,32 @@
     .metric { text-align: center; }
     .metric-value { font-size: 1.5rem; font-weight: 700; color: var(--cyber-cyan); font-family: 'Sora', sans-serif; }
     .metric-label { font-size: 0.8rem; color: var(--grey); margin-top: 4px; }
+
+    /* Testimonials Section (Placeholder) */
+    .testimonials { padding: 120px 20px; background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 60px;
+    }
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px; border-radius: 20px; transition: all 0.3s ease; text-align: left;
+      position: relative; backdrop-filter: blur(5px);
+    }
+    .testimonial-card:hover { transform: translateY(-5px); border-color: var(--electric-blue); }
+    .testimonial-card::before {
+      content: '“'; font-size: 6rem; color: rgba(0, 132, 255, 0.2); position: absolute;
+      top: -10px; left: 10px; font-family: serif; z-index: 0;
+    }
+    .testimonial-content { position: relative; z-index: 1; }
+    .testimonial-text { color: rgba(255, 255, 255, 0.9); line-height: 1.7; margin-bottom: 30px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 15px; }
+    .author-avatar {
+      width: 50px; height: 50px; background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: white; font-weight: 700;
+    }
+    .author-info h4 { color: white; font-weight: 600; margin-bottom: 4px; }
+    .author-info p { color: var(--grey); font-size: 0.85rem; }
 
     /* Pricing */
     .pricing { padding: 120px 20px; background: linear-gradient(180deg, var(--dark) 0%, var(--deep-purple) 100%); }
@@ -330,27 +389,31 @@
       position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 10, 10, 0.95);
       border-bottom: 1px solid rgba(0, 132, 255, 0.2); padding: 12px 20px; display: none;
       justify-content: space-between; align-items: center; gap: 20px; z-index: 999; backdrop-filter: blur(10px);
+      flex-wrap: wrap;
     }
     .sticky-header.show { display: flex; }
     .sticky-header-text { color: white; font-weight: 600; display: none; }
     .sticky-header-text.show { display: block; }
+    .sticky-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
     .sticky-btn {
-      padding: 10px 24px; background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
+      padding: 10px 20px; background: linear-gradient(135deg, var(--electric-blue), var(--tiktok-pink));
       color: white; border: none; border-radius: 50px; font-weight: 600; cursor: pointer;
       transition: all 0.3s ease; text-decoration: none; display: inline-flex; align-items: center;
-      gap: 8px; font-size: 0.95rem;
+      gap: 8px; font-size: 0.9rem; white-space: nowrap;
     }
+    .sticky-btn.whatsapp { background: var(--whatsapp-green); }
     .sticky-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 132, 255, 0.4); }
 
     /* Media Queries */
     @media (max-width: 768px) {
-      .services-grid, .case-grid, .pricing-grid, .problem-grid { grid-template-columns: 1fr; }
+      .services-grid, .case-grid, .pricing-grid, .problem-grid, .testimonials-grid { grid-template-columns: 1fr; }
       .timeline-item { flex-direction: column; }
       .timeline-item::before { left: 39px; top: 100px; }
       .hero-stats { gap: 30px; }
       .stat-number { font-size: 2.5rem; }
       .pricing-card.featured { transform: scale(1); }
-      .sticky-header-text { display: none; }
+      .sticky-header { flex-direction: column; align-items: flex-start; }
+      .sticky-buttons { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -360,12 +423,17 @@
 
   <div class="sticky-header" id="stickyHeader">
     <div class="sticky-header-text show">🚀 Limited Slots - Book Your Free Strategy Call</div>
-    <a href="https://wa.me/254736127284?text=Hi!%20I%20want%20to%20scale%20with%20Meta%20and%20TikTok%20ads" class="sticky-btn">
-      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-      </svg>
-      Chat on WhatsApp
-    </a>
+    <div class="sticky-buttons">
+      <a href="https://wa.me/254736127284?text=Hi!%20I%20want%20to%20scale%20with%20Meta%20and%20TikTok%20ads" class="sticky-btn whatsapp">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <a href="https://calendly.com/wanjalandubi/book-your-strategy-call" class="sticky-btn">
+        📅 Book Call
+      </a>
+    </div>
   </div>
 
   <section class="hero">
@@ -396,6 +464,9 @@
           </svg>
           Chat on WhatsApp Now
         </a>
+        <a href="https://calendly.com/wanjalandubi/book-your-strategy-call" class="btn btn-primary">
+          📅 Book Free Strategy Call
+        </a>
         <a href="#pricing" class="btn btn-secondary">See Pricing →</a>
       </div>
     </div>
@@ -422,6 +493,28 @@
         <div class="badge-icon">🇰🇪</div>
         <div class="badge-text">Kenya Expert</div>
         <div class="badge-subtext">Local Market Context</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Funnel Mockup Visual -->
+  <section class="whatsapp-visual">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SEE IT IN ACTION</span>
+        <h2>How the WhatsApp Funnel Works</h2>
+        <p>One click from your ad opens a chat – instant conversation, higher trust, more sales.</p>
+      </div>
+      <div class="whatsapp-mockup">
+        <div class="mockup-header">
+          <span>🇰🇪 Business</span>
+        </div>
+        <div class="mockup-chat">
+          <div class="message in">Hi! I saw your ad for the new collection. Is size M available?</div>
+          <div class="message out">Hello! Yes, size M is in stock. Would you like to order? I can send payment details.</div>
+          <div class="message in">Great! Send me the details. I'll pay now.</div>
+          <div class="message out">Awesome! Here's the link to pay. Thanks for choosing us! 🚀</div>
+        </div>
       </div>
     </div>
   </section>
@@ -672,6 +765,55 @@
               <div class="metric">
                 <div class="metric-value">4.8x</div>
                 <div class="metric-label">ROAS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section (Placeholder) -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CLIENT LOVE</span>
+        <h2>What Our Clients Say</h2>
+        <p>Real feedback from business owners who scaled with us.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"Since we started working with them, our WhatsApp inquiries have tripled. The team understands the Kenyan market perfectly. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JM</div>
+              <div class="author-info">
+                <h4>James Mwangi</h4>
+                <p>CEO, Nairobi Fashion</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"We were skeptical about WhatsApp ads, but they delivered 450+ leads in just two months. The team is professional and results-driven."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AW</div>
+              <div class="author-info">
+                <h4>Alice Wanjiku</h4>
+                <p>Marketing Director, Kilimani Properties</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"TikTok + WhatsApp was a game-changer for our gym. We filled all our membership slots in weeks. Their creative strategy is top-notch."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">KO</div>
+              <div class="author-info">
+                <h4>Kevin Otieno</h4>
+                <p>Owner, FitHub Gym</p>
               </div>
             </div>
           </div>
